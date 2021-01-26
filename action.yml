@@ -29,7 +29,7 @@ inputs:
   job_name:
     description: 'Allure EE job name'
     required: true
-    default: "${{ github.repository }} ${{ github.workflow }}"
+    default: "${{ github.workflow }}"
   job_run_uid:
     description: 'GitHub Actions run id'
     required: true
