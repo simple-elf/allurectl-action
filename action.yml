@@ -1,0 +1,41 @@
+name: 'Allure EE Report'
+description: 'Upload allure-results to Allure EE server'
+author: 'simple-elf'
+branding:
+  icon: 'layout'
+  color: 'red'
+inputs:
+  allure_results:
+    description: 'Allure test result data dir'
+    required: true
+    default: 'allure-results'
+  allure_version:
+    description: 'Allure EE cli (allurectl) version'
+    required: true
+    default: '1.13.0'
+  allure_ee_endpoint:
+    description: 'Allure EE endpoint url'
+    required: true
+  allure_ee_token:
+    description: 'Allure EE token'
+    required: true
+  project_id:
+    description: 'Allure EE project id'
+    required: true
+  launch_name:
+    description: 'Allure EE launch name'
+    required: true
+    default: "GITHUB_${{ github.run_number }}"
+  job_run_id:
+    description: 'Allure EE launch name'
+    required: true
+    default: ${{ github.run_number }}
+  job_run_uid:
+    description: 'GitHub Actions run id'
+    required: true
+    default: ${{ github.run_id }}
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+#  args:
+#    - ${{ inputs.allure_version }}

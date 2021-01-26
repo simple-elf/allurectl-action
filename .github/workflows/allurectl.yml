@@ -1,0 +1,26 @@
+name: allurectl
+
+on:
+  release:
+    types:
+      - created
+  push:
+    branches-ignore:
+      - '!master'
+
+jobs:
+  allure:
+    name: Upload allure-results to Allure EE server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Allure EE upload
+        if: always()
+        continue-on-error: true
+        uses: ./allure-ee-action
+        with:
+          allure_results: allure-results
+          allure_ee_endpoint: ${{ secrets.ALLURE_EE_ENDPOINT }}
+          allure_ee_token: ${{ secrets.ALLURE_EE_TOKEN }}
+          project_id: ${{ secrets.ALLURE_EE_PROJECT_ID }}
