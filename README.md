@@ -14,7 +14,8 @@ Default `allure-results`.
 
 ```yaml
 - name: Upload allure-results to Allure EE
-  uses: ./allure-ee-action
+  #uses: ./allure-ee-action
+  uses: simple-elf/allurectl-action@master
   id: allure-ee
   with:
     allure_results: allure-results

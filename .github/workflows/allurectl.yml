@@ -18,7 +18,7 @@ jobs:
       - name: Allure EE upload
         if: always()
         continue-on-error: true
-        uses: simple-elf/allure-ee-action@master
+        uses: simple-elf/allurectl-action@master
         with:
           allure_results: allure-results
           allure_ee_endpoint: ${{ secrets.ALLURE_EE_ENDPOINT }}
