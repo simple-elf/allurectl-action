@@ -1,4 +1,4 @@
-name: 'Allure EE Report'
+name: 'Allure EE uploader'
 description: 'Upload allure-results to Allure EE server'
 author: 'simple-elf'
 branding:
