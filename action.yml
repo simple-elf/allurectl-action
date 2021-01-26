@@ -25,7 +25,7 @@ inputs:
   launch_name:
     description: 'Allure EE launch name'
     required: true
-    default: "${{ github.workflow }} #${{ github.run_number }}"
+    default: "${{ github.workflow }}_#${{ github.run_number }}"
   job_name:
     description: 'Allure EE job name'
     required: true
