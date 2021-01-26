@@ -25,11 +25,11 @@ inputs:
   launch_name:
     description: 'Allure EE launch name'
     required: true
-    default: "GITHUB_${{ github.run_number }}"
-  job_run_id:
-    description: 'Allure EE launch name'
+    default: "${{ github.repository }}/${{ github.workflow }} #${{ github.run_number }}"
+  job_name:
+    description: 'Allure EE job name'
     required: true
-    default: ${{ github.run_number }}
+    default: "${{ github.repository }}/${{ github.workflow }}"
   job_run_uid:
     description: 'GitHub Actions run id'
     required: true
