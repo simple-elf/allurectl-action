@@ -1,4 +1,4 @@
-FROM simple-elf/allurectl:latest
+FROM simple1elf/allurectl:latest
 
 #ARG RELEASE='1.13.0'
 #ARG ALLURE_REPO=https://dl.bintray.com/qameta/generic/allurectl
